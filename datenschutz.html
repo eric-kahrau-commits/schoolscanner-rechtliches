@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Datenschutzerklärung — SchoolScanner</title>
+<style>
+:root{--bg:#EDEBEB;--surface:#fff;--ink:#14192E;--ink2:#3A4256;--muted:#5C6478;
+--rule:#D3CFCB;--accent:#A8642B;--warn-bg:#F7EFDD;--warn:#8A5A00}
+@media(prefers-color-scheme:dark){:root{--bg:#01072B;--surface:#0A1140;--ink:#E9ECF6;
+--ink2:#C2C8DC;--muted:#8B93A8;--rule:#232C5C;--accent:#D98F4E;--warn-bg:#2E2410;--warn:#E9A83A}}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);margin:0;padding:0 20px 80px;
+font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:720px;margin:0 auto}
+header{padding:48px 0 8px;border-bottom:1px solid var(--rule);margin-bottom:32px}
+.eyebrow{font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+color:var(--accent);margin:0 0 10px}
+h1{font-size:clamp(26px,5vw,34px);line-height:1.15;letter-spacing:-.02em;margin:0 0 12px;text-wrap:balance}
+h2{font-size:19px;margin:34px 0 10px;letter-spacing:-.01em;text-wrap:balance}
+p,li{color:var(--ink2);max-width:66ch}
+ul{padding-left:20px}li{margin-bottom:6px}
+a{color:var(--accent);text-underline-offset:2px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+strong{color:var(--ink)}
+address{font-style:normal;background:var(--surface);border:1px solid var(--rule);
+border-radius:9px;padding:14px 16px;margin:14px 0;color:var(--ink)}
+.note{background:var(--warn-bg);border:1px solid var(--warn);border-radius:9px;
+padding:14px 16px;margin:20px 0}
+.note p{color:var(--warn);margin:0}
+nav{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:18px;font-size:14px}
+footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--rule);
+font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<p class="eyebrow">Rechtliches</p>
+<h1>Datenschutzerklärung</h1>
+<nav>
+<a href="index.html">Übersicht</a>
+<a href="datenschutz.html">Datenschutz</a>
+<a href="nutzungsbedingungen.html">Nutzungsbedingungen</a>
+<a href="impressum.html">Impressum</a>
+</nav>
+</header>
+
+<h2>Kurz gesagt</h2>
+<p>SchoolScanner speichert alles auf deinem Gerät. Es gibt kein Nutzerkonto,
+keinen Server des Anbieters und keine Übertragung deiner Unterlagen — es sei
+denn, du hinterlegst selbst einen API-Schlüssel (siehe unten).</p>
+
+<h2>Verantwortlich</h2>
+<address>
+Kristin Kahrau<br>
+Packhofstraße 25<br>
+14776 Brandenburg an der Havel<br>
+Deutschland<br><br>
+E-Mail: <a href="mailto:eric-kahrau@web.de">eric-kahrau@web.de</a>
+</address>
+
+<h2>Was auf deinem Gerät gespeichert wird</h2>
+<ul>
+<li><strong>Gescannte Seiten</strong> als Bilddateien im geschützten Bereich der App</li>
+<li><strong>Erkannter Text</strong> und daraus gewonnene Schlagwörter</li>
+<li><strong>Deine Profilangaben</strong>: Ansprechname, Nutzername, Klassenstufe,
+Schulart, Notenschnitt, Interessen und — falls gewählt — ein Profilbild</li>
+<li><strong>Chatverläufe</strong> mit deinen Fragen und den Antworten</li>
+<li><strong>Einstellungen</strong> wie Erscheinungsbild und Antwortlänge</li>
+</ul>
+<p>Diese Daten liegen ausschließlich auf deinem Gerät. Der Anbieter hat keinen
+Zugriff darauf und erhält keine Kopie.</p>
+
+<h2>Kamera und Fotos</h2>
+<p>Die App fragt den Zugriff auf Kamera und Fotomediathek nur, wenn du scannst
+oder ein Bild auswählst. Die Aufnahmen bleiben auf dem Gerät.</p>
+
+<h2>Texterkennung, Suche und Wissensnetz</h2>
+<p>Texterkennung, Suche und das Wissensnetz rechnen vollständig auf deinem
+Gerät. Dafür verlässt kein Inhalt die App.</p>
+
+<h2>Antworten ohne Internet</h2>
+<p>Standardmäßig antwortet das Sprachmodell, das Apple auf deinem Gerät
+bereitstellt (Apple Intelligence). Auch dabei verlässt kein Inhalt dein Gerät.</p>
+
+<h2>Antworten über einen eigenen API-Schlüssel</h2>
+<p>Du kannst freiwillig einen eigenen Schlüssel von Anthropic hinterlegen, um
+die stärkeren Modelle zu nutzen. <strong>Nur dann</strong> werden Daten
+übertragen, und zwar bei jeder Frage:</p>
+<ul>
+<li>deine <strong>Frage</strong> und der bisherige Gesprächsverlauf</li>
+<li><strong>Auszüge aus deinen Dokumenten</strong>, die zur Frage passen (im SchoolBrain-Modus)</li>
+<li><strong>Inhalte, die du anhängst</strong></li>
+<li>dein <strong>Profilkontext</strong>: Ansprechname, Klassenstufe, Schulart,
+<strong>Notenschnitt</strong> und Interessen — damit die Antwort auf dich zugeschnitten ist</li>
+</ul>
+<p>Empfänger ist <strong>Anthropic PBC, San Francisco, USA</strong>. Damit werden
+die Daten in ein Land außerhalb der EU übermittelt. Anthropic ist nach dem EU-US
+Data Privacy Framework zertifiziert; es gelten zusätzlich die
+<a href="https://www.anthropic.com/legal/privacy">Datenschutzbestimmungen von
+Anthropic</a>.</p>
+<p>Du schließt den Vertrag über die Nutzung dieser Schnittstelle
+<strong>selbst mit Anthropic</strong> ab. Dein Schlüssel liegt im Schlüsselbund
+deines Geräts und wird ausschließlich zur Anmeldung bei Anthropic verwendet.</p>
+<p>Wenn du das nicht möchtest: Hinterlege keinen Schlüssel oder entferne ihn im
+Profil. Die App bleibt vollständig nutzbar.</p>
+
+<h2>Rechtsgrundlagen</h2>
+<ul>
+<li>Die Verarbeitung auf deinem Gerät erfolgt zur Erfüllung des
+Nutzungsvertrags (Art. 6 Abs. 1 lit. b DSGVO).</li>
+<li>Die Übermittlung an Anthropic erfolgt auf Grundlage deiner Einwilligung,
+die du durch das Hinterlegen des Schlüssels erteilst (Art. 6 Abs. 1 lit. a
+DSGVO). Du kannst sie jederzeit widerrufen, indem du den Schlüssel entfernst.</li>
+</ul>
+
+<h2>Wie lange gespeichert wird</h2>
+<p>So lange, bis du die Daten löschst. Du kannst einzelne Dokumente entfernen,
+im Profil die gesamte Bibliothek zurücksetzen oder die App löschen — dann werden
+alle Daten mitsamt Schlüssel entfernt.</p>
+
+<h2>Keine Weitergabe, keine Auswertung</h2>
+<p>Es gibt keine Analyse-Dienste, keine Werbung, kein Tracking und keine
+Weitergabe an Dritte. Die App erhebt keinerlei Nutzungsdaten.</p>
+
+<h2>Deine Rechte</h2>
+<p>Dir stehen die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung,
+Datenübertragbarkeit und Widerspruch zu (Art. 15–21 DSGVO). Da alle Daten auf
+deinem Gerät liegen und der Anbieter keinen Zugriff hat, übst du diese Rechte
+unmittelbar in der App aus.</p>
+<p>Für Anliegen, die darüber hinausgehen, erreichst du den Anbieter unter
+<a href="mailto:eric-kahrau@web.de">eric-kahrau@web.de</a>.</p>
+<p>Du hast außerdem das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu
+beschweren.</p>
+
+<h2>Kinder und Jugendliche</h2>
+<p>Die App richtet sich an Schülerinnen und Schüler. Weil alle Daten auf dem
+Gerät bleiben, werden keine personenbezogenen Daten von Minderjährigen an den
+Anbieter übermittelt.</p>
+<p>Das Hinterlegen eines eigenen API-Schlüssels setzt ein kostenpflichtiges
+Konto bei Anthropic voraus. Wenn du noch nicht volljährig bist, richte das bitte
+nur gemeinsam mit einem Erziehungsberechtigten ein — dabei werden auch dein
+Notenschnitt und deine Klassenstufe übertragen.</p>
+
+<h2>Änderungen</h2>
+<p>Ändert sich, wie die App mit Daten umgeht, wird diese Erklärung angepasst und
+mit der Aktualisierung ausgeliefert.</p>
+
+<footer>SchoolScanner · Stand 17.08.2026 · <a href="index.html">Alle Rechtstexte</a></footer>
+</div>
+</body>
+</html>
