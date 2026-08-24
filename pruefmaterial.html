@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sample worksheets for App Review — SchoolBrain</title>
+<meta name="robots" content="noindex">
+<style>
+/*
+  Zwei Ansprüche an dieselbe Seite:
+
+  1. Die Anleitung oben richtet sich an den Prüfer und ist englisch.
+  2. Die Blätter darunter müssen von einer Kamera erfasst werden — am
+     Bildschirm wie auf Papier. Deshalb schwarz auf reinem Weiß, große Schrift,
+     keine Verläufe und keine Schatten auf der Blattfläche.
+
+  Der dunkle Seitenhintergrund ist kein Design, sondern Funktion: Die
+  Seitenerkennung der App sucht ein helles Viereck vor dunklerem Grund. Liegt
+  das Blatt randlos auf weißer Fläche, findet sie keine Kante.
+*/
+:root{--page:#F4F3F1;--ink:#14192E;--ink2:#3A4256;--muted:#5C6478;
+--rule:#D3CFCB;--accent:#A8642B;--frame:#1B2036}
+*{box-sizing:border-box}
+body{background:var(--frame);color:var(--ink);margin:0;padding:0 16px 80px;
+font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+-webkit-font-smoothing:antialiased}
+.wrap{max-width:820px;margin:0 auto}
+
+/* ---- Anleitung für den Prüfer ---- */
+.intro{background:var(--page);border-radius:12px;padding:28px 30px;margin:28px 0 40px}
+.intro .eyebrow{font-size:11.5px;font-weight:600;letter-spacing:.14em;
+text-transform:uppercase;color:var(--accent);margin:0 0 10px}
+.intro h1{font-size:clamp(22px,4.4vw,29px);line-height:1.2;letter-spacing:-.02em;margin:0 0 14px}
+.intro p,.intro li{color:var(--ink2);max-width:64ch}
+.intro ol{padding-left:22px}
+.intro li{margin-bottom:7px}
+.intro strong{color:var(--ink)}
+.hint{border-left:3px solid var(--accent);padding:2px 0 2px 15px;margin:20px 0}
+.hint p{margin:0;color:var(--ink2)}
+
+/* ---- Die Blätter ---- */
+.sheet{background:#fff;color:#000;border-radius:6px;padding:52px 56px;margin:0 0 34px;
+max-width:none}
+.sheet h2{font-size:27px;line-height:1.2;margin:0 0 4px;color:#000;letter-spacing:-.01em}
+.sheet .meta{font-size:16px;color:#333;margin:0 0 26px;padding-bottom:14px;
+border-bottom:2px solid #000}
+.sheet h3{font-size:20px;margin:26px 0 9px;color:#000}
+.sheet p,.sheet li{font-size:17px;line-height:1.62;color:#000;max-width:none}
+.sheet ul,.sheet ol{padding-left:24px;margin:9px 0}
+.sheet li{margin-bottom:6px}
+.sheet .formel{font-size:19px;margin:16px 0;padding:13px 17px;border:2px solid #000;
+display:inline-block}
+.sheet table{border-collapse:collapse;width:100%;margin:16px 0;font-size:16.5px}
+.sheet th,.sheet td{border:1.5px solid #000;padding:9px 12px;text-align:left;color:#000}
+.sheet th{font-weight:700}
+.sheet .kasten{border:2px solid #000;padding:15px 18px;margin:18px 0}
+.sheet .kasten p{margin:0}
+.sheetnum{color:#fff;opacity:.55;font-size:13.5px;letter-spacing:.1em;
+text-transform:uppercase;margin:0 0 9px;font-weight:600}
+
+footer{color:#8B93A8;font-size:13px;margin-top:40px;text-align:center}
+footer a{color:#C99160}
+
+/* ---- Papier ---- */
+@media print{
+  body{background:#fff;padding:0}
+  .intro,footer,.sheetnum{display:none}
+  .sheet{border-radius:0;padding:22mm 20mm;margin:0;page-break-after:always;
+    break-after:page}
+  .sheet:last-of-type{page-break-after:auto;break-after:auto}
+}
+@page{size:A4;margin:0}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="intro">
+  <p class="eyebrow">SchoolBrain · App Review</p>
+  <h1>Sample worksheets for reviewing SchoolBrain</h1>
+
+  <p>SchoolBrain ships with an <strong>empty library on purpose</strong> — it is
+  built around material the user scans themselves, so it contains no content of
+  its own. These three sheets exist so the app can be reviewed without needing
+  German schoolwork at hand.</p>
+
+  <p>They carry realistic school content in German, the language the app's text
+  recognition and search are tuned for.</p>
+
+  <h3 style="font-size:17px;margin:24px 0 8px">How to use them</h3>
+  <ol>
+    <li><strong>Print them</strong> (⌘P / Ctrl+P — each sheet prints on its own
+      A4 page), or</li>
+    <li><strong>open this page on a computer screen</strong> and scan straight
+      off the display with the iPhone.</li>
+  </ol>
+
+  <div class="hint">
+    <p><strong>If scanning from a screen:</strong> the app looks for a bright
+    rectangle against a darker background, which is why these sheets sit on a
+    dark page. Keep the whole white sheet inside the frame, hold the phone
+    roughly 25–30 cm away, and avoid reflections on the display. The shutter
+    releases by itself once the frame locks on and the image is sharp.</p>
+  </div>
+
+  <h3 style="font-size:17px;margin:24px 0 8px">What each sheet is for</h3>
+  <ul>
+    <li><strong>Sheets 1 and 2</strong> are both biology and share vocabulary
+      (glucose, oxygen, ATP). Scan both, then open the <em>„Netz"</em> [Graph]
+      tab — the app draws the connection between them.</li>
+    <li><strong>Sheet 3</strong> is mathematics and contains formulas, which
+      shows how the app typesets them in an answer.</li>
+    <li>After scanning, search for <em>Glucose</em> in <em>„Bibliothek"</em>
+      [Library], then ask <em>„Was ist Photosynthese?"</em> in the chat.</li>
+  </ul>
+</div>
+
+<!-- ============ BLATT 1 ============ -->
+<p class="sheetnum">Sheet 1 of 3 · Biology</p>
+<div class="sheet">
+  <h2>Die Photosynthese</h2>
+  <p class="meta">Biologie · Klasse 9 · Arbeitsblatt 1</p>
+
+  <p>Pflanzen stellen ihre Nährstoffe selbst her. Diesen Vorgang nennt man
+  Photosynthese. Er findet in den Chloroplasten der Pflanzenzelle statt, also
+  in den grünen Bestandteilen des Blattes.</p>
+
+  <h3>Die Grundgleichung</h3>
+  <p>Aus Kohlenstoffdioxid und Wasser entstehen mit Hilfe von Lichtenergie
+  Glucose und Sauerstoff:</p>
+  <p class="formel">6 CO2 + 6 H2O + Lichtenergie → C6H12O6 + 6 O2</p>
+
+  <h3>Die beiden Teilschritte</h3>
+  <ol>
+    <li><strong>Lichtreaktion:</strong> Das Blattgrün Chlorophyll nimmt
+      Sonnenlicht auf. Wasser wird gespalten, dabei entsteht Sauerstoff. Die
+      Energie wird zunächst in ATP gespeichert.</li>
+    <li><strong>Dunkelreaktion:</strong> Mit der Energie aus dem ATP wird
+      Kohlenstoffdioxid zu Glucose aufgebaut. Licht ist dafür nicht mehr nötig.</li>
+  </ol>
+
+  <h3>Was die Photosynthese beeinflusst</h3>
+  <table>
+    <tr><th>Faktor</th><th>Wirkung auf die Photosynthese</th></tr>
+    <tr><td>Lichtstärke</td><td>Mehr Licht steigert die Rate bis zu einer Grenze</td></tr>
+    <tr><td>Temperatur</td><td>Optimum bei etwa 25 Grad Celsius</td></tr>
+    <tr><td>CO2-Gehalt</td><td>Höherer Gehalt steigert die Rate deutlich</td></tr>
+    <tr><td>Wasser</td><td>Bei Mangel schliessen sich die Spaltoeffnungen</td></tr>
+  </table>
+
+  <div class="kasten">
+    <p><strong>Merke:</strong> Die Photosynthese ist der einzige natürliche
+    Vorgang, der in grossem Umfang Sauerstoff freisetzt. Ohne sie gäbe es keine
+    sauerstoffhaltige Atmosphäre und damit kein Leben, wie wir es kennen.</p>
+  </div>
+
+  <h3>Aufgaben</h3>
+  <ol>
+    <li>Nenne die Ausgangsstoffe und die Endprodukte der Photosynthese.</li>
+    <li>Erkläre, warum eine Pflanze im Dunkeln keine Glucose herstellen kann.</li>
+    <li>Begründe, weshalb die Rate bei sehr hoher Temperatur wieder sinkt.</li>
+  </ol>
+</div>
+
+<!-- ============ BLATT 2 ============ -->
+<p class="sheetnum">Sheet 2 of 3 · Biology</p>
+<div class="sheet">
+  <h2>Die Zellatmung</h2>
+  <p class="meta">Biologie · Klasse 9 · Arbeitsblatt 2</p>
+
+  <p>Die Zellatmung ist die Umkehrung der Photosynthese. Sie läuft in den
+  Mitochondrien ab und liefert der Zelle die Energie, die sie zum Leben
+  braucht. Tiere, Pflanzen und Menschen betreiben Zellatmung.</p>
+
+  <h3>Die Grundgleichung</h3>
+  <p class="formel">C6H12O6 + 6 O2 → 6 CO2 + 6 H2O + Energie</p>
+
+  <p>Glucose und Sauerstoff werden verbraucht. Es entstehen Kohlenstoffdioxid,
+  Wasser und Energie in Form von ATP. Ein Molekül Glucose liefert etwa 32
+  Moleküle ATP.</p>
+
+  <h3>Photosynthese und Zellatmung im Vergleich</h3>
+  <table>
+    <tr><th></th><th>Photosynthese</th><th>Zellatmung</th></tr>
+    <tr><td>Ort</td><td>Chloroplast</td><td>Mitochondrium</td></tr>
+    <tr><td>Ausgangsstoffe</td><td>CO2 und Wasser</td><td>Glucose und Sauerstoff</td></tr>
+    <tr><td>Endprodukte</td><td>Glucose und Sauerstoff</td><td>CO2 und Wasser</td></tr>
+    <tr><td>Energie</td><td>wird gespeichert</td><td>wird freigesetzt</td></tr>
+    <tr><td>Licht</td><td>nötig</td><td>nicht nötig</td></tr>
+  </table>
+
+  <div class="kasten">
+    <p><strong>Merke:</strong> Beide Vorgänge bilden einen Kreislauf. Was die
+    Photosynthese aufbaut, baut die Zellatmung wieder ab — und umgekehrt.
+    Deshalb bleibt die Zusammensetzung der Luft über lange Zeiträume stabil.</p>
+  </div>
+
+  <h3>Aufgaben</h3>
+  <ol>
+    <li>Vergleiche beide Vorgänge anhand der Tabelle in eigenen Worten.</li>
+    <li>Erkläre, warum auch Pflanzen Zellatmung betreiben müssen.</li>
+    <li>Beschreibe, was mit dem Sauerstoffgehalt der Luft geschähe, wenn alle
+      Pflanzen verschwänden.</li>
+  </ol>
+</div>
+
+<!-- ============ BLATT 3 ============ -->
+<p class="sheetnum">Sheet 3 of 3 · Mathematics</p>
+<div class="sheet">
+  <h2>Quadratische Funktionen</h2>
+  <p class="meta">Mathematik · Klasse 9 · Arbeitsblatt 3</p>
+
+  <p>Eine quadratische Funktion hat die allgemeine Form:</p>
+  <p class="formel">f(x) = ax2 + bx + c   mit a ungleich 0</p>
+
+  <p>Ihr Graph heisst Parabel. Der Faktor a bestimmt, ob sie nach oben oder
+  nach unten geöffnet ist und wie schmal sie verläuft.</p>
+
+  <h3>Die Scheitelpunktform</h3>
+  <p class="formel">f(x) = a(x - d)2 + e</p>
+  <p>Der Scheitelpunkt liegt dann bei S(d | e). Diese Form lässt sich durch
+  quadratische Ergänzung aus der allgemeinen Form gewinnen.</p>
+
+  <h3>Nullstellen berechnen</h3>
+  <p>Die Nullstellen findet man mit der Mitternachtsformel:</p>
+  <p class="formel">x = (-b plusminus Wurzel aus (b2 - 4ac)) geteilt durch 2a</p>
+
+  <p>Der Ausdruck unter der Wurzel heisst Diskriminante D. An ihr erkennt man
+  die Anzahl der Nullstellen:</p>
+  <table>
+    <tr><th>Diskriminante</th><th>Anzahl der Nullstellen</th></tr>
+    <tr><td>D grösser als 0</td><td>zwei Nullstellen</td></tr>
+    <tr><td>D gleich 0</td><td>eine Nullstelle, der Scheitelpunkt</td></tr>
+    <tr><td>D kleiner als 0</td><td>keine Nullstelle</td></tr>
+  </table>
+
+  <div class="kasten">
+    <p><strong>Merke:</strong> Der Faktor a verändert nur die Form der Parabel,
+    niemals ihre Lage. Verschoben wird sie ausschliesslich über d und e in der
+    Scheitelpunktform.</p>
+  </div>
+
+  <h3>Beispiel</h3>
+  <p>Gegeben ist f(x) = x2 - 4x + 3.</p>
+  <ul>
+    <li>Diskriminante: D = 16 - 12 = 4, also zwei Nullstellen.</li>
+    <li>Nullstellen: x1 = 1 und x2 = 3.</li>
+    <li>Scheitelpunkt: S(2 | -1).</li>
+  </ul>
+
+  <h3>Aufgaben</h3>
+  <ol>
+    <li>Bestimme die Nullstellen von f(x) = x2 - 6x + 8.</li>
+    <li>Gib den Scheitelpunkt von f(x) = 2(x - 3)2 + 5 an.</li>
+    <li>Erkläre, warum eine nach oben geöffnete Parabel mit dem Scheitelpunkt
+      oberhalb der x-Achse keine Nullstelle haben kann.</li>
+  </ol>
+</div>
+
+<footer>
+  <p>SchoolBrain · Sample material provided for App Review purposes ·
+  <a href="index.html">Legal information</a></p>
+</footer>
+
+</div>
+</body>
+</html>
