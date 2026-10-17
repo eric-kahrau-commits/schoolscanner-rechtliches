@@ -47,7 +47,7 @@ font-size:13px;color:var(--muted)}
 </header>
 
 <h2>Kurz gesagt</h2>
-<p>SchoolBrain speichert alles auf deinem Gerät. Es gibt kein Nutzerkonto und kein Passwort. Daten verlassen dein Gerät nur in zwei Fällen, die du selbst einschaltest: wenn du einen eigenen API-Schlüssel hinterlegst und wenn du ein <strong>öffentliches Profil</strong> veröffentlichst (beides unten). Tust du keines von beiden, verlässt kein Inhalt die App.</p>
+<p>SchoolBrain speichert deine Unterlagen auf deinem Gerät. Ein Passwort gibt es nicht. Inhalte verlassen dein Gerät nur, wenn du eine <strong>KI-Funktion</strong> nutzt (Chat, Lernsets, Aufbereiten von Aufnahmen), wenn du dich <strong>mit Apple anmeldest</strong> und damit eine Sicherung in deiner privaten iCloud anlegst, oder wenn du ein <strong>öffentliches Profil</strong> veröffentlichst (alles unten). Scannst, suchst und sortierst du nur, verlässt kein Inhalt die App.</p>
 <h2>Verantwortlich</h2>
 <address>
 Kristin Kahrau<br>
@@ -63,25 +63,30 @@ Deutschland
 <li><strong>Deine Profilangaben</strong>: Ansprechname, Nutzername, Klassenstufe, Schulart, Notenschnitt, Interessen und — falls gewählt — ein Profilbild</li>
 <li><strong>Chatverläufe</strong> mit deinen Fragen und den Antworten</li>
 <li><strong>Notizzettel</strong> mit Text, Datum, Uhrzeit und Kategorie</li>
+<li><strong>Audioaufnahmen</strong>: die Tondatei, der erkannte Wortlaut mit Zeitangaben und das daraus aufbereitete Dokument</li>
+<li><strong>Lerninterviews</strong>: die Abschrift deines Interviews, die Hilfsfragen von SchoolBrain und die Auswertung mit Anmerkungen, Fehlern und offenen Punkten — die Tondatei selbst wird nicht aufbewahrt</li>
 <li><strong>Lernsets</strong> mit ihren Materialien, deiner Selbsteinschätzung und allem, was daraus entsteht: Karteikarten, Schnelllern-Fragen, Lernübersichten, Probeklausuren und deren Korrektur</li>
 <li><strong>Lernfortschritt</strong>: Lernpunkte, Lerntage, Serie und die Lernzeit, die die App misst, solange du in einem Lernmodus lernst</li>
 <li><strong>Einstellungen</strong> wie Erscheinungsbild und Antwortlänge</li>
 </ul>
-<p>Diese Daten liegen ausschließlich auf deinem Gerät. Der Anbieter hat keinen Zugriff darauf und erhält keine Kopie — mit Ausnahme dessen, was du über ein öffentliches Profil selbst veröffentlichst.</p>
+<p>Diese Daten liegen auf deinem Gerät. Der Anbieter hat keinen Zugriff darauf und erhält keine Kopie — mit Ausnahme dessen, was du über ein öffentliches Profil selbst veröffentlichst. Was bei einer KI-Anfrage durch den Server des Anbieters läuft, wird dort weitergeleitet und nicht gespeichert (siehe <em>KI-Funktionen</em>).</p>
 <h2>Kamera und Fotos</h2>
-<p>Die App fragt den Zugriff auf Kamera und Fotomediathek nur, wenn du scannst oder ein Bild auswählst. Die Aufnahmen bleiben auf dem Gerät — mit einer Ausnahme: Legst du mit eigenem API-Schlüssel ein Lernset an, gehen die Fotos und Scans daraus an Anthropic (siehe unten).</p>
+<p>Die App fragt den Zugriff auf Kamera und Fotomediathek nur, wenn du scannst oder ein Bild auswählst. Die Aufnahmen bleiben auf dem Gerät — mit vier Ausnahmen, alle nur, wenn du die jeweilige KI-Funktion nutzt: Legst du ein Lernset an, gehen die Fotos und Scans daraus an Anthropic; fotografierst du für den <strong>Vokabelmodus</strong> eine Vokabelliste, geht das Foto an Anthropic, um die Wortpaare herauszulesen; hängst du im Chat ein Bild an, geht es mit deiner Frage an Anthropic; und Seiten, deren Text die App nicht sicher lesen konnte, schickt sie zum genaueren Lesen an Anthropic (siehe unten).</p>
+<h2>Mikrofon und Audioaufnahmen</h2>
+<p>Die App fragt den Zugriff auf Mikrofon und Spracherkennung nur, wenn du eine Audioaufnahme startest. Die <strong>Tondatei bleibt auf deinem Gerät</strong> und wird nie übertragen. Die Spracherkennung läuft auf dem Gerät (Apple); beim ersten Mal lädt iOS dafür ein Sprachpaket von Apple, ohne Inhalte zu übertragen. Auch welche Sätze zur selben Stimme gehören, rechnet die App auf dem Gerät aus Tonhöhe und Klangfarbe; gespeichert wird davon nur die Zuordnung („Stimme A"), kein Stimmabdruck.</p>
+<p>Zum Aufbereiten geht der <strong>erkannte Text</strong> einer Aufnahme — mit Zeitangaben, den Buchstaben der Stimmen und den von dir markierten Momenten — an Anthropic, damit daraus ein gegliedertes Dokument mit Kurzfassung wird. Ohne KI-Points bleibt die Aufnahme als Rohfassung auf dem Gerät.</p>
+<p>Im <strong>Lerninterview</strong> gilt dasselbe: Der Ton wird nach der Erkennung gelöscht. Der erkannte Text geht zusammen mit den Materialien des Lernsets an Anthropic — für die Hilfsfragen während des Sprechens, die lesbare Abschrift und die Auswertung.</p>
 <h2>Texterkennung, Suche und Wissensnetz</h2>
 <p>Texterkennung, Suche und das Wissensnetz rechnen vollständig auf deinem Gerät. Dafür verlässt kein Inhalt die App.</p>
-<h2>Antworten ohne Internet</h2>
-<p>Standardmäßig antwortet das Sprachmodell, das Apple auf deinem Gerät bereitstellt (Apple Intelligence). Auch dabei verlässt kein Inhalt dein Gerät.</p>
-<h2>Antworten über einen eigenen API-Schlüssel</h2>
-<p>Du kannst freiwillig einen eigenen Schlüssel von Anthropic hinterlegen, um die stärkeren Modelle zu nutzen. <strong>Nur dann</strong> werden Daten übertragen, und zwar bei jeder Frage:</p>
+<h2>KI-Funktionen</h2>
+<p>Der Chat und die KI-Funktionen der Lernsets arbeiten mit den Modellen von Anthropic (Claude). Bezahlt werden sie mit <strong>KI-Points</strong> (siehe unten). Jede Anfrage geht dafür über den Server des Anbieters an Anthropic; der Server leitet sie weiter und <strong>speichert ihren Inhalt nicht</strong>. Bei jeder Frage im Chat gehen an Anthropic:</p>
 <ul>
-<li>deine <strong>Frage</strong> und der bisherige Gesprächsverlauf</li>
-<li><strong>Auszüge aus deinen Dokumenten</strong>, die zur Frage passen (im SchoolBrain-Modus)</li>
-<li><strong>Inhalte, die du anhängst</strong></li>
+<li>deine <strong>Frage</strong> und der bisherige Gesprächsverlauf — zusätzlich in einem kurzen Vorab-Aufruf, der aus der Frage Suchbegriffe macht, und einmal je Gespräch für dessen Titel</li>
+<li><strong>Auszüge aus deinen Dokumenten, Notizzetteln und Lernset-Materialien</strong>, die zur Frage passen (im SchoolBrain-Modus, seitenweise); fragst du ausdrücklich nach deinen Zetteln, alle Notizzettel (bis zu hundert)</li>
+<li><strong>Inhalte, die du anhängst</strong> — Dokumente, Dateien, Fotos und Bilder sowie Audioaufnahmen als aufbereiteter Text (nie als Ton)</li>
 <li>dein <strong>Profilkontext</strong>: Ansprechname, Klassenstufe, Schulart, <strong>Notenschnitt</strong> und Interessen — damit die Antwort auf dich zugeschnitten ist</li>
 </ul>
+<p>Konnte die App den Text einer gesicherten Seite nicht sicher lesen — etwa bei Handschrift —, schickt sie das <strong>Bild dieser Seite</strong> an Anthropic, um den Text genauer zu lesen. Der gelesene Text wird in deiner Bibliothek gespeichert. Für ältere Seiten fragt die App vorher.</p>
 <p>Wenn du ein Lernset anlegst oder dafür Karteikarten, Schnelllern-Fragen, eine Lernübersicht oder eine Probeklausur erstellst, gehen außerdem an Anthropic, damit daraus die Aufgaben für deine Selbsteinschätzung, die Karten, die Fragen, der Inhalt der Übersicht und die Aufgaben des Tests entstehen:</p>
 <ul>
 <li>der <strong>Text deiner Materialien</strong> und <strong>Fotos und Scans</strong> daraus — verkleinert, aber so, dass sich die Schrift lesen lässt; bei Karteikarten, Schnelllernen, Lernübersicht und Probeklausur auch <strong>PDF-Dateien</strong>, aus denen sich wenig Text lesen ließ</li>
@@ -89,10 +94,23 @@ Deutschland
 <li>bei Karteikarten, Schnelllernen, Lernübersicht und Probeklausur deine <strong>Selbsteinschätzung</strong>, wie gut die bisherigen Karten und Fragen je Thema saßen, die gewählte Schwierigkeit, die Fragen, die du aussortiert hast, und deine Antworten aus den Fragebögen von Lernübersicht und Probeklausur</li>
 <li>bei der Probeklausur zusätzlich der <strong>Inhalt deiner letzten Lernübersicht</strong>, damit der Test genau den Stoff abfragt, mit dem du gelernt hast</li>
 </ul>
+<p>Für den <strong>Vokabelmodus</strong> gehen die Fotos oder der Text deiner Vokabelliste an Anthropic, damit daraus Wortpaare werden; geübt wird danach auf dem Gerät.</p>
 <p>Die Blätter der Lernübersicht und das Blatt der Probeklausur setzt die App danach selbst auf deinem Gerät; dafür geht nichts weiter hinaus. Deine Punkte aus der Selbstkorrektur und deine Note bleiben auf dem Gerät.</p>
-<p>Empfänger ist <strong>Anthropic PBC, San Francisco, USA</strong>. Damit werden die Daten in ein Land außerhalb der EU übermittelt. Anthropic ist nach dem EU-US Data Privacy Framework zertifiziert; es gelten zusätzlich die Datenschutzbestimmungen von Anthropic (<a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a>).</p>
-<p>Du schließt den Vertrag über die Nutzung dieser Schnittstelle <strong>selbst mit Anthropic</strong> ab. Dein Schlüssel liegt im Schlüsselbund deines Geräts und wird ausschließlich zur Anmeldung bei Anthropic verwendet.</p>
-<p>Wenn du das nicht möchtest: Hinterlege keinen Schlüssel oder entferne ihn in den Einstellungen. Die App bleibt vollständig nutzbar.</p>
+<p>Empfänger ist <strong>Anthropic PBC, San Francisco, USA</strong>, als Auftragsverarbeiter des Anbieters. Damit werden die Daten in ein Land außerhalb der EU übermittelt. Anthropic ist nach dem EU-US Data Privacy Framework zertifiziert; es gelten zusätzlich die Datenschutzbestimmungen von Anthropic (anthropic.com/legal/privacy).</p>
+<p>Wenn du das nicht möchtest: Nutze die KI-Funktionen nicht. Scannen, Bibliothek, Suche, Wissensnetz und Notizzettel funktionieren ohne sie; Notenschnitt und Interessen kannst du im Profil jederzeit leer lassen.</p>
+<h2>KI-Points und Käufe</h2>
+<p>KI-Points kaufst du als In-App-Kauf über den <strong>App Store</strong>. Den Kauf wickelt Apple ab; der Anbieter erfährt dabei weder deinen Namen noch deine Zahlungsdaten. Damit dein Guthaben nicht an diesem einen iPhone hängt und nicht verloren geht, führt der Server des Anbieters ein <strong>Punktekonto</strong>. Dort liegen:</p>
+<ul>
+<li>eine <strong>zufällige Gerätekennung</strong>, die die App beim ersten Bedarf anlegt (im Schlüsselbund deines Geräts, über den iCloud-Schlüsselbund auch auf deinen anderen Geräten), und eine Prüfsumme ihres Geheimnisses</li>
+<li>dein <strong>Punktestand</strong></li>
+<li>deine <strong>Käufe</strong>: Kauf-Nummer von Apple, Paket, Punkte, Zeitpunkt, ob es ein Testkauf war und ob er erstattet wurde — zur Prüfung fragt der Server Apple nach der Kauf-Nummer</li>
+<li>je KI-Anfrage <strong>Zeitpunkt, Modell, Zahl der Token und die abgebuchten Punkte</strong> — keine Inhalte</li>
+<li>wenn du dich mit Apple anmeldest: die <strong>Apple-Kennung</strong>, eine zufällige Nummer, die Apple nur für diese App vergibt (nicht deine E-Mail-Adresse), damit deine Punkte auf jedes deiner Geräte zurückkommen</li>
+<li>beim Anlegen einer Gerätekennung eine <strong>Prüfsumme deiner IP-Adresse</strong>, um massenhaftes Anlegen zu bremsen — nie die Adresse selbst</li>
+</ul>
+<p>Der Server läuft bei <strong>Cloudflare, Inc., San Francisco, USA</strong>, als Auftragsverarbeiter. Cloudflare ist nach dem EU-US Data Privacy Framework zertifiziert.</p>
+<h2>Konto und Sicherung (freiwillig)</h2>
+<p>Meldest du dich <strong>mit Apple</strong> an, erhält die App von Apple eine zufällige Kennung und — nur beim ersten Mal und nur, wenn du es freigibst — deinen Namen und eine E-Mail-Adresse, die auch eine Weiterleitungsadresse von Apple sein kann. Deine Lernsets, Chats, dein Lernfortschritt und deine Profilangaben werden dann in deiner <strong>privaten iCloud-Datenbank</strong> gesichert. Auf diesen Bereich hat nur dein iCloud-Konto Zugriff, der Anbieter nicht. Abmelden und <em>Konto löschen</em> findest du unter <em>Profil → Zahnrad → Konto</em>.</p>
 <h2>Öffentliches Profil und Freunde (freiwillig)</h2>
 <p>Du kannst ein öffentliches Profil veröffentlichen, um Freunde hinzuzufügen und Lernsets zu teilen. <strong>Erst mit diesem ausdrücklichen Schritt</strong> werden Daten dafür übertragen; bis dahin bleibt dein Profil auf deinem Gerät.</p>
 <p>Veröffentlicht werden:</p>
@@ -111,34 +129,45 @@ Deutschland
 <p><strong>Einladungslinks</strong> führen auf eine kleine Seite unter eric-kahrau-commits.github.io, die bei <strong>GitHub</strong> (GitHub Inc., USA) liegt. Ist SchoolBrain installiert, öffnet der Link direkt die App; sonst zeigt die Seite den Weg in den App Store. Beim Aufruf der Seite verarbeitet GitHub technisch notwendige Verbindungsdaten wie die IP-Adresse. Die Seite selbst setzt keine Cookies und enthält kein Tracking; der Code im Link verweist nur auf das Profil und sagt nichts über dich.</p>
 <p>Der Anbieter kann öffentliche Profile und Lernsets einsehen und prüft gemeldete Inhalte. Anstößige Inhalte werden entfernt und Profile, die gegen die Nutzungsbedingungen verstoßen, gesperrt.</p>
 <p>Du kannst dein öffentliches Profil jederzeit unter <em>Profil → Zahnrad → Öffentliches Profil → Öffentliches Profil löschen</em> entfernen. Dann verschwinden Profil, geteilte Lernsets und Freundschaften aus iCloud. Kopien, die Freunde bereits übernommen haben, liegen auf deren Geräten und bleiben dort.</p>
+<h2>Support-Nachrichten (freiwillig)</h2>
+<p>Unter <em>Profil → Zahnrad → Support kontaktieren</em> kannst du dem Anbieter schreiben. Gesendet werden nur, wenn du auf <em>Senden</em> tippst:</p>
+<ul>
+<li>der <strong>Anlass</strong>, deine <strong>Nachricht</strong> und bis zu <strong>drei Bilder</strong>, die du selbst anhängst</li>
+<li>dein <strong>Name auf dem Profil</strong> bzw. dein <strong>@Name</strong> und die ersten acht Zeichen deiner <strong>Gerätekennung</strong> als Nutzer-ID</li>
+<li>deine <strong>E-Mail-Adresse</strong>, nur wenn du sie einträgst — sie dient allein der Antwort</li>
+<li><strong>App-Version, iOS-Version und Gerätemodell</strong>, dazu ob dein Gerät mit Apple verbunden ist und dein Punktestand, damit Fehler sich nachvollziehen lassen</li>
+</ul>
+<p>Die Nachricht geht über den Server des Anbieters (<strong>Cloudflare</strong>, siehe oben) und von dort als E-Mail über ein Postfach bei <strong>WEB.DE</strong> (1&amp;1 Mail &amp; Media GmbH, Montabaur, Deutschland) an den Anbieter. Der Server speichert den Inhalt nicht; er merkt sich 30 Tage lang nur Gerätekennung und Zeitpunkt, um höchstens fünf Nachrichten pro Tag und Gerät zuzulassen. Die E-Mail wird gelöscht, sobald dein Anliegen erledigt ist.</p>
 <h2>Vertrieb über den App Store</h2>
 <p>Die App wird über Apples App Store verbreitet. Beim Laden und Aktualisieren verarbeitet Apple dabei eigene Daten — etwa dein Apple-Konto und Angaben zu deinem Gerät. Dafür ist Apple eigenständig verantwortlich; es gelten Apples Datenschutzbestimmungen.</p>
 <p>Hast du in den Systemeinstellungen unter <em>Datenschutz &amp; Sicherheit → Analyse &amp; Verbesserungen</em> zugestimmt, Analysedaten mit Entwicklern zu teilen, erhält der Anbieter über App Store Connect <strong>Absturzberichte und zusammengefasste Nutzungszahlen</strong>. Diese Berichte tragen nicht deinen Namen und enthalten keine Inhalte aus deinen Dokumenten, Chats oder Profilangaben. Du kannst die Zustimmung in den Systemeinstellungen jederzeit widerrufen.</p>
 <h2>Rechtsgrundlagen</h2>
 <ul>
 <li>Die Verarbeitung auf deinem Gerät erfolgt zur Erfüllung des Nutzungsvertrags (Art. 6 Abs. 1 lit. b DSGVO).</li>
-<li>Die Übermittlung an Anthropic erfolgt auf Grundlage deiner Einwilligung, die du durch das Hinterlegen des Schlüssels erteilst (Art. 6 Abs. 1 lit. a DSGVO). Du kannst sie jederzeit widerrufen, indem du den Schlüssel entfernst.</li>
+<li>Die Übermittlung an Anthropic über den Server des Anbieters und das Punktekonto dienen der Erfüllung des Nutzungsvertrags: Ohne sie gibt es die KI-Funktionen und die gekauften KI-Points nicht (Art. 6 Abs. 1 lit. b DSGVO). Die Prüfsumme der IP-Adresse beruht auf dem berechtigten Interesse, den Dienst vor Missbrauch zu schützen (Art. 6 Abs. 1 lit. f DSGVO).</li>
+<li>Die Sicherung in deiner iCloud beruht auf deiner Einwilligung, die du mit der Anmeldung erteilst (Art. 6 Abs. 1 lit. a DSGVO). Du widerrufst sie, indem du dich abmeldest oder das Konto löschst.</li>
 <li>Das öffentliche Profil beruht auf deiner Einwilligung, die du beim Veröffentlichen erteilst (Art. 6 Abs. 1 lit. a DSGVO). Du widerrufst sie, indem du das Profil löschst. Die Prüfung gemeldeter Inhalte beruht auf dem berechtigten Interesse an einem sicheren Angebot für Schülerinnen und Schüler (Art. 6 Abs. 1 lit. f DSGVO).</li>
+<li>Eine Support-Nachricht verarbeitet der Anbieter, um dein Anliegen zu beantworten — auf deine Anfrage hin (Art. 6 Abs. 1 lit. b DSGVO). Die Tagesgrenze beruht auf dem berechtigten Interesse, den Dienst vor Missbrauch zu schützen (Art. 6 Abs. 1 lit. f DSGVO).</li>
 </ul>
 <h2>Wie lange gespeichert wird</h2>
 <p>So lange, bis du die Daten löschst. Du kannst einzelne Dokumente entfernen, in den Einstellungen die gesamte Bibliothek zurücksetzen oder die App löschen — dann verschwinden Dokumente, Notizzettel, Lernsets, Chatverläufe, Lernfortschritt, Profilangaben und Einstellungen restlos.</p>
 <p>Dein öffentliches Profil bleibt gespeichert, bis du es löschst; das Löschen der App allein entfernt es <strong>nicht</strong>, weil es in iCloud liegt. Meldungen werden gelöscht, sobald sie bearbeitet sind.</p>
-<p><strong>Der API-Schlüssel überlebt das Löschen der App.</strong> iOS bewahrt Einträge im Schlüsselbund unabhängig von der App auf; installierst du sie erneut, ist der Schlüssel wieder da. Wenn du ihn endgültig loswerden willst, entferne ihn <strong>vor</strong> dem Löschen der App über <em>Profil → Zahnrad → KI-Einstellungen → Modelle → Entfernen</em>.</p>
+<p><strong>Das Punktekonto bleibt bestehen</strong>, solange dein Guthaben besteht — gekaufte KI-Points verfallen nicht. Die Gerätekennung überlebt das Löschen der App, weil iOS den Schlüsselbund unabhängig von der App aufbewahrt; so ist dein Guthaben nach einer Neuinstallation wieder da. <em>Konto löschen</em> entfernt die Apple-Kennung vom Server; die Punkte bleiben dann am Gerät. Möchtest du auch das Punktekonto vollständig löschen lassen, schreib an <a href="mailto:eric-kahrau@web.de">eric-kahrau@web.de</a> — ein verbleibendes Guthaben verfällt dann. Kaufeinträge werden so lange aufbewahrt, wie es für Erstattungen und gesetzliche Pflichten nötig ist.</p>
 <h2>Keine Weitergabe, keine Auswertung</h2>
-<p>Die App selbst enthält keine Analyse-Dienste, keine Werbung und kein Tracking und verkauft oder übermittelt nichts zu Werbezwecken. Was Apple als Vertriebsplattform und als Betreiber der Datenbank für öffentliche Profile verarbeitet, steht weiter oben.</p>
+<p>Die App selbst enthält keine Analyse-Dienste, keine Werbung und kein Tracking und verkauft oder übermittelt nichts zu Werbezwecken. Was Apple, Anthropic, Cloudflare und WEB.DE verarbeiten, steht weiter oben.</p>
 <h2>Deine Rechte</h2>
 <p>Dir stehen die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch zu (Art. 15–21 DSGVO). Daten auf deinem Gerät verwaltest du unmittelbar in der App; dein öffentliches Profil kannst du in der App jederzeit ändern und löschen.</p>
 <p>Für Anliegen, die darüber hinausgehen, erreichst du den Anbieter unter <a href="mailto:eric-kahrau@web.de">eric-kahrau@web.de</a>.</p>
 <p>Du hast außerdem das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.</p>
 <h2>Kinder und Jugendliche</h2>
-<p>Die App richtet sich an Schülerinnen und Schüler. Ohne öffentliches Profil bleiben alle Daten auf dem Gerät, und es werden keine personenbezogenen Daten von Minderjährigen an den Anbieter übermittelt.</p>
+<p>Die App richtet sich an Schülerinnen und Schüler. Ohne KI-Funktionen, Anmeldung und öffentliches Profil bleiben alle Daten auf dem Gerät.</p>
 <p>Ein öffentliches Profil darfst du erst veröffentlichen, wenn du mindestens 16 Jahre alt bist oder deine Eltern einverstanden sind (Art. 8 DSGVO) — die App fragt das vor dem Veröffentlichen ab. Du musst dort keinen echten Namen angeben, und die Klasse ist freiwillig.</p>
-<p>Das Hinterlegen eines eigenen API-Schlüssels setzt ein kostenpflichtiges Konto bei Anthropic voraus. Wenn du noch nicht volljährig bist, richte das bitte nur gemeinsam mit einem Erziehungsberechtigten ein — dabei werden auch dein Notenschnitt und deine Klassenstufe übertragen.</p>
+<p>KI-Points sind ein kostenpflichtiger In-App-Kauf. Wenn du noch nicht volljährig bist, kaufe sie bitte nur mit dem Einverständnis deiner Eltern; über Apples Familienfreigabe („Kaufen anfragen“) bestätigen sie jeden Kauf selbst. Nutzt du die KI-Funktionen, werden auch dein Notenschnitt und deine Klassenstufe übertragen, falls du sie angegeben hast.</p>
 <h2>Änderungen</h2>
 <p>Ändert sich, wie die App mit Daten umgeht, wird diese Erklärung angepasst und mit der Aktualisierung ausgeliefert.</p>
-<p>Stand: 28. September 2026 (SchoolBrain 1.0.2)</p>
+<p>Stand: 16. Oktober 2026</p>
 
-<footer>SchoolBrain · Stand 28.09.2026 · <a href="index.html">Alle Rechtstexte</a></footer>
+<footer>SchoolBrain · Stand 16.10.2026 · <a href="index.html">Alle Rechtstexte</a></footer>
 </div>
 </body>
 </html>
