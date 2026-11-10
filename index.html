@@ -1,54 +1,115 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Lern mit mir – SchoolBrain</title>
-  <meta name="description" content="Ein Freund lädt dich zu SchoolBrain ein — die App macht aus deinen Unterlagen Lernkarten, Übersichten und Probeklausuren.">
-  <meta property="og:title" content="Lern mit mir auf SchoolBrain 📚">
-  <meta property="og:description" content="Ein Freund lädt dich ein — Lernkarten, Übersichten und Probeklausuren aus deinen Unterlagen.">
-  <meta property="og:image" content="https://eric-kahrau-commits.github.io/icon.png">
-  <meta property="og:type" content="website">
-  <meta name="robots" content="noindex">
-  <style>
-    :root { --canvas: #000; --card: rgba(160,120,255,0.12); --stroke: rgba(200,160,255,0.28); --text: #fff; --muted: rgba(255,255,255,0.62); }
-    * { box-sizing: border-box; }
-    body { margin: 0; min-height: 100vh; background: radial-gradient(ellipse at 50% 10%, #3a1b6b 0%, var(--canvas) 62%); color: var(--text);
-           font-family: -apple-system, BlinkMacSystemFont, "SF Pro Rounded", system-ui, sans-serif; display: flex; justify-content: center; padding: 48px 20px; }
-    main { width: 100%; max-width: 420px; text-align: center; }
-    .gift { font-size: 84px; line-height: 1; filter: drop-shadow(0 12px 30px rgba(255,79,184,0.5)); animation: wobble 2.2s ease-in-out infinite; }
-    @keyframes wobble { 0%,100% { transform: rotate(-4deg) scale(1); } 50% { transform: rotate(4deg) scale(1.05); } }
-    @media (prefers-reduced-motion: reduce) { .gift { animation: none; } }
-    h1 { font-size: 28px; margin: 22px 0 8px; }
-    p { color: var(--muted); line-height: 1.5; margin: 0 0 20px; }
-    .code { font: 700 28px ui-monospace, "SF Mono", Menlo, monospace; letter-spacing: 2px; padding: 18px; border-radius: 18px;
-            background: var(--card); border: 1px solid var(--stroke); margin: 8px 0 24px; }
-    a.button { display: block; padding: 16px; border-radius: 16px; font-weight: 700; text-decoration: none; margin-bottom: 12px; font-size: 17px; }
-    a.primary { background: linear-gradient(90deg, #7B5CFF, #FF4FB8, #FF9A3D); color: #fff; }
-    a.secondary { background: var(--card); color: var(--text); border: 1px solid var(--stroke); }
-    small { display: block; color: var(--muted); line-height: 1.5; margin-top: 20px; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rechtliches — SchoolBrain</title>
+<style>
+:root{--bg:#EDEBEB;--surface:#fff;--ink:#14192E;--ink2:#3A4256;--muted:#5C6478;
+--rule:#D3CFCB;--accent:#A8642B;--warn-bg:#F7EFDD;--warn:#8A5A00}
+@media(prefers-color-scheme:dark){:root{--bg:#01072B;--surface:#0A1140;--ink:#E9ECF6;
+--ink2:#C2C8DC;--muted:#8B93A8;--rule:#232C5C;--accent:#D98F4E;--warn-bg:#2E2410;--warn:#E9A83A}}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);margin:0;padding:0 20px 80px;
+font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:720px;margin:0 auto}
+header{padding:48px 0 8px;border-bottom:1px solid var(--rule);margin-bottom:32px}
+.eyebrow{font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+color:var(--accent);margin:0 0 10px}
+h1{font-size:clamp(26px,5vw,34px);line-height:1.15;letter-spacing:-.02em;margin:0 0 12px;text-wrap:balance}
+h2{font-size:19px;margin:34px 0 10px;letter-spacing:-.01em;text-wrap:balance}
+p,li{color:var(--ink2);max-width:66ch}
+ul{padding-left:20px}li{margin-bottom:6px}
+a{color:var(--accent);text-underline-offset:2px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+strong{color:var(--ink)}
+address{font-style:normal;background:var(--surface);border:1px solid var(--rule);
+border-radius:9px;padding:14px 16px;margin:14px 0;color:var(--ink)}
+.note{background:var(--warn-bg);border:1px solid var(--warn);border-radius:9px;
+padding:14px 16px;margin:20px 0}
+.note p{color:var(--warn);margin:0}
+nav{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:18px;font-size:14px}
+footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--rule);
+font-size:13px;color:var(--muted)}
+</style>
 </head>
 <body>
-  <main>
-    <div class="gift" aria-hidden="true">🎁</div>
-    <h1>Lern mit mir auf SchoolBrain</h1>
-    <p>Jemand schenkt dir KI-Points für SchoolBrain – für den Chat, Karteikarten, Lernübersichten und mehr.</p>
-    <div class="code" id="code">SB-––––-––––</div>
-    <a class="button primary" id="open" href="schoolbrain://i">In SchoolBrain öffnen</a>
-    <a class="button secondary" id="store" href="#">SchoolBrain im App Store laden</a>
-    <small>Noch nicht installiert? Lade die App, richte sie ein und tippe danach noch einmal auf den Link – oder gib den Code unter <b>Einstellungen → KI-Points → Gutschein einlösen</b> ein.</small>
-  </main>
-  <script>
-    const APP_STORE_URL = "https://apps.apple.com/app/id6802082312";
-    const params = new URLSearchParams(location.search);
-    const raw = (params.get("c") || "").toUpperCase().replace(/[^0-9A-Z]/g, "");
-    // Einladungscode: „F“ + 8 Zeichen (SchoolBrain, Freunde einladen).
-    if (/^F[0-9A-F]{8}$/.test(raw)) {
-      document.getElementById("code").textContent = raw;
-      document.getElementById("open").href = "schoolbrain://i?c=" + raw;
-    }
-    document.getElementById("store").href = APP_STORE_URL;
-  </script>
+<div class="wrap">
+<header>
+<p class="eyebrow">SchoolBrain</p>
+<h1>Rechtliches</h1>
+<nav>
+<a href="index.html">Übersicht</a>
+<a href="datenschutz.html">Datenschutz</a>
+<a href="nutzungsbedingungen.html">Nutzungsbedingungen</a>
+<a href="impressum.html">Impressum</a>
+</nav>
+</header>
+
+<p>SchoolBrain ist eine App, mit der Schülerinnen und Schüler ihre Unterlagen
+scannen, durchsuchbar machen, Fragen dazu stellen und damit lernen können.
+<strong>Deine Unterlagen liegen auf deinem Gerät.</strong></p>
+
+<h2>Hilfe und Kontakt</h2>
+<p>Fragen, Fehlermeldungen oder Wünsche? Am schnellsten geht es in der App unter
+<em>Profil → Zahnrad → Support kontaktieren</em>. Oder schreib an
+<a href="mailto:eric-kahrau@web.de">eric-kahrau@web.de</a> — am besten mit
+Angabe deines iPhone-Modells und der iOS-Version.</p>
+
+<h3>Häufige Fragen</h3>
+<p><strong>Was kostet die App?</strong> Die App ist kostenlos. Der Chat und die
+KI-Funktionen der Lernsets verbrauchen <strong>KI-Points</strong>, die du als
+In-App-Kauf über den App Store auflädst — ohne Abo. Jede Anfrage verbraucht nur
+so viele Punkte, wie sie tatsächlich kostet, und gekaufte Punkte verfallen nicht.
+Scannen, Bibliothek, Suche, Wissensnetz und Notizzettel funktionieren auch ohne
+Punkte.</p>
+
+<p><strong>Der Chat antwortet nicht.</strong> Sieh oben rechts auf der Startseite
+nach dem KI-Akku: Ist er leer, lädst du ihn mit einem Tipp darauf wieder auf.
+Ohne Internetverbindung sagt dir die App das direkt. Hilft beides nicht, schreib
+uns über <em>Support kontaktieren</em>.</p>
+
+<p><strong>Ich habe gekauft, aber keine Punkte bekommen.</strong> Die Punkte
+kommen normalerweise nach wenigen Sekunden. Hing die Verbindung, holt die App
+den Kauf beim nächsten Öffnen von selbst nach. Du kannst auch unter
+<em>Profil → Zahnrad → KI-Points → Käufe prüfen</em> nachhelfen. Bezahlt ist
+bezahlt — ein Kauf geht nicht verloren.</p>
+
+<p><strong>Wo liegen meine Daten?</strong> Scans, Bibliothek, Chats und
+Notizzettel liegen auf deinem Gerät. Für eine KI-Anfrage geht nur, was zu ihr
+gehört, über unseren Server an Anthropic; der Server speichert den Inhalt nicht.
+Er führt nur dein Punktekonto. Meldest du dich freiwillig mit Apple an, werden
+Lernsets, Chats und Fortschritt in deiner privaten iCloud gesichert. Näheres in
+der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+
+<p><strong>Neues iPhone — sind meine Punkte weg?</strong> Nein. Mit
+<em>Mit Apple anmelden</em> hängen deine Punkte an deiner Apple-ID und kommen
+auf jedes deiner Geräte zurück, zusammen mit der Sicherung aus deiner iCloud.</p>
+
+<p><strong>Wie lösche ich alles?</strong> Dein Konto löschst du unter
+<em>Profil → Zahnrad → Konto → Konto löschen</em>, die Bibliothek unter
+<em>Bibliothek zurücksetzen</em> in den Einstellungen. Löschst du die App,
+verschwinden alle Daten auf dem Gerät. Gekaufte Punkte bleiben erhalten, damit
+nichts Bezahltes verloren geht; soll auch dein Punktekonto gelöscht werden,
+schreib uns.</p>
+
+<h2>Die drei Texte</h2>
+<ul>
+<li><a href="datenschutz.html">Datenschutzerklärung</a> — was gespeichert wird, was übertragen wird, und welche Rechte du hast</li>
+<li><a href="nutzungsbedingungen.html">Nutzungsbedingungen</a> — wofür die App gedacht ist und wo ihre Grenzen liegen</li>
+<li><a href="impressum.html">Impressum</a> — wer die App herausgibt</li>
+</ul>
+
+<h2>Anbieter</h2>
+<address>
+Kristin Kahrau<br>
+Packhofstraße 25<br>
+14776 Brandenburg an der Havel<br>
+Deutschland<br><br>
+E-Mail: <a href="mailto:eric-kahrau@web.de">eric-kahrau@web.de</a>
+</address>
+
+<footer>SchoolBrain · Stand 30.10.2026 · <a href="index.html">Alle Rechtstexte</a></footer>
+</div>
 </body>
 </html>
